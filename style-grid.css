@@ -60,48 +60,31 @@ html,body{margin:0;font-family:Arial, sans-serif;}
 .menu a{color:inherit; text-decoration:none;}
 
 @media (max-width:700px) {
+
   .page {
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto;
   }
 
-  /* Remove central gutter */
-  .gutter {
-    display: none;
-  }
+  .gutter { display: none; }
 
-  /* Blocks take full width */
+  .block1 { grid-row: 1; }
+  .block2 { grid-row: 2; }
+  .block3 { grid-row: 3; }
+  .block4 { grid-row: 4; }
+  .block5 { grid-row: 5; }
+
   .block1, .block2, .block3, .block4, .block5 {
-    grid-column: 1;
-    min-height: auto;
     border-width: 0 0 1px 0;
+    min-height: auto;
+    width: 100%;
   }
 
-  .block1 {
+  .block1, .block4 {
     flex-direction: column;
     text-align: center;
     gap: 8px;
-  }
-
-  .block3 {
-    padding: 12px;
-  }
-
-  .block3 p {
-    max-width: 100%;
-    font-size: 15px;
-  }
-
-  .block4 {
-    flex-direction: column;
-    text-align: center;
-    gap: 8px;
-  }
-
-  /* Menu becomes top horizontal */
-  .block2 {
-    order: 2;
-    background: #52b2ed;
   }
 
   .menu {
@@ -111,21 +94,18 @@ html,body{margin:0;font-family:Arial, sans-serif;}
     padding: 10px;
   }
 
-  .menu li {
-    margin: 0;
+  .menu li { margin: 0; }
+
+  .block3 p {
+    max-width: 100%;
+    font-size: 15px;
+    margin-bottom: 10px;
   }
 
-  /* Keep footer quote centered */
-  .block5 {
-    text-align: center;
-    padding: 14px;
-  }
-
-  /* Badges above headings */
   .badge {
-    width: auto;
-    padding: 5px 12px;
     margin-bottom: 6px;
+    width: auto;
+    padding: 4px 10px;
   }
 }
 
