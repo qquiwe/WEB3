@@ -81,6 +81,7 @@ html,body{margin:0;font-family:Arial, sans-serif;}
     min-height: auto;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     text-align: left;
   }
 
@@ -106,6 +107,7 @@ html,body{margin:0;font-family:Arial, sans-serif;}
     text-align: left;
     padding: 20px;
     background: #fff;
+    display: block;
   }
 
   .block3 p {
@@ -116,6 +118,8 @@ html,body{margin:0;font-family:Arial, sans-serif;}
 
   .block2 {
     background: #52b2ed;
+    display: flex;
+    justify-content: center;
   }
 
   .menu {
@@ -123,11 +127,9 @@ html,body{margin:0;font-family:Arial, sans-serif;}
     padding: 0;
     margin: 0;
   }
-
   .menu li {
     margin: 8px 0;
   }
-
   .menu a {
     text-decoration: none;
     color: #000;
@@ -137,6 +139,12 @@ html,body{margin:0;font-family:Arial, sans-serif;}
     background: #d14c4a;
     text-align: center;
     padding: 20px;
+  }
+}
+
+@media (min-width:701px) {
+  .block1, .block4 {
+    flex-direction: column;
   }
 }
 
